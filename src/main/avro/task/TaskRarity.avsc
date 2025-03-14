@@ -1,0 +1,12 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "type": "enum",
+  "name": "TaskRarity",
+  "symbols": [
+    "COMMON",
+    "UNCOMMON",
+    "RARE",
+    "EPIC",
+    "LEGENDARY"
+  ]
+}

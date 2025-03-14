@@ -1,0 +1,42 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "type": "record",
+  "name": "GenerateTasksEvent",
+  "fields": [
+    {
+      "name": "transactionId",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": "long"
+    },
+    {
+      "name": "inputs",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "GenerateTask",
+          "fields": [
+            {
+              "name": "rarity",
+              "type": {
+                "type": "com.sleepkqq.sololeveling.task.kafka.TaskRarity"
+              }
+            },
+            {
+              "name": "topics",
+              "type": {
+                "type": "array",
+                "items": {
+                  "type": "com.sleepkqq.sololeveling.task.kafka.TaskTopic"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

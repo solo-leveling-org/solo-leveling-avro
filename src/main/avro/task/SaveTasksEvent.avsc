@@ -1,0 +1,66 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "type": "record",
+  "name": "SaveTasksEvent",
+  "fields": [
+    {
+      "name": "transactionId",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": "long"
+    },
+    {
+      "name": "tasks",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "SaveTask",
+          "fields": [
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "name": "experience",
+              "type": "int"
+            },
+            {
+              "name": "rarity",
+              "type": {
+                "type": "com.sleepkqq.sololeveling.task.kafka.TaskRarity"
+              }
+            },
+            {
+              "name": "topics",
+              "type": {
+                "type": "array",
+                "items": {
+                  "type": "com.sleepkqq.sololeveling.task.kafka.TaskTopic"
+                }
+              }
+            },
+            {
+              "name": "agility",
+              "type": "int"
+            },
+            {
+              "name": "strength",
+              "type": "int"
+            },
+            {
+              "name": "intelligence",
+              "type": "int"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

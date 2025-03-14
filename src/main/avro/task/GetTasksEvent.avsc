@@ -1,0 +1,32 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "type": "record",
+  "name": "GetTasksEvent",
+  "fields": [
+    {
+      "name": "transactionId",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": "long"
+    },
+    {
+      "name": "userLevel",
+      "type": "int"
+    },
+    {
+      "name": "userTopics",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "com.sleepkqq.sololeveling.task.kafka.TaskTopic"
+        }
+      }
+    },
+    {
+      "name": "count",
+      "type": "int"
+    }
+  ]
+}
