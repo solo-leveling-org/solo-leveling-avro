@@ -1,5 +1,5 @@
 {
-  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "namespace": "com.sleepkqq.sololeveling.avro.task",
   "type": "enum",
   "name": "TaskRarity",
   "symbols": [

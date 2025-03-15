@@ -1,5 +1,5 @@
 {
-  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "namespace": "com.sleepkqq.sololeveling.avro.task",
   "type": "record",
   "name": "SaveTasksEvent",
   "fields": [
@@ -34,7 +34,7 @@
             {
               "name": "rarity",
               "type": {
-                "type": "com.sleepkqq.sololeveling.task.kafka.TaskRarity"
+                "type": "com.sleepkqq.sololeveling.avro.task.TaskRarity"
               }
             },
             {
@@ -42,7 +42,7 @@
               "type": {
                 "type": "array",
                 "items": {
-                  "type": "com.sleepkqq.sololeveling.task.kafka.TaskTopic"
+                  "type": "com.sleepkqq.sololeveling.avro.task.TaskTopic"
                 }
               }
             },

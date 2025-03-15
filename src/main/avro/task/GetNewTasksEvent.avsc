@@ -1,7 +1,7 @@
 {
-  "namespace": "com.sleepkqq.sololeveling.task.kafka",
+  "namespace": "com.sleepkqq.sololeveling.avro.task",
   "type": "record",
-  "name": "GetTasksEvent",
+  "name": "GetNewTasksEvent",
   "fields": [
     {
       "name": "transactionId",
@@ -20,7 +20,7 @@
       "type": {
         "type": "array",
         "items": {
-          "type": "com.sleepkqq.sololeveling.task.kafka.TaskTopic"
+          "type": "com.sleepkqq.sololeveling.avro.task.TaskTopic"
         }
       }
     },
