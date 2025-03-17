@@ -1,7 +1,7 @@
 {
   "namespace": "com.sleepkqq.sololeveling.avro.task",
   "type": "record",
-  "name": "GetNewTasksEvent",
+  "name": "CreatedTasksEvent",
   "fields": [
     {
       "name": "transactionId",
@@ -12,24 +12,11 @@
       "type": "long"
     },
     {
-      "name": "userLevel",
-      "type": "int"
-    },
-    {
       "name": "userTaskIds",
       "type": {
         "type": "array",
         "items": {
           "type": "string"
-        }
-      }
-    },
-    {
-      "name": "userTaskDetails",
-      "type": {
-        "type": "array",
-        "items": {
-          "type": "com.sleepkqq.sololeveling.avro.task.UserTaskInfo"
         }
       }
     }

@@ -1,0 +1,15 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.avro.task",
+  "type": "record",
+  "name": "UserTaskInfo",
+  "fields": [
+    {
+      "name": "taskTopic",
+      "type": "com.sleepkqq.sololeveling.avro.task.TaskTopic"
+    },
+    {
+      "name": "Assessment",
+      "type": "com.sleepkqq.sololeveling.avro.task.Assessment"
+    }
+  ]
+}
