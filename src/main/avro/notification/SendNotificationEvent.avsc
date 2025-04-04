@@ -1,0 +1,23 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.avro.notification",
+  "type": "record",
+  "name": "SendNotificationEvent",
+  "fields": [
+    {
+      "name": "transactionId",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": "long"
+    },
+    {
+      "name": "priority",
+      "type": "com.sleepkqq.sololeveling.avro.notification.NotificationPriority"
+    },
+    {
+      "name": "notification",
+      "type": "com.sleepkqq.sololeveling.avro.notification.Notification"
+    }
+  ]
+}

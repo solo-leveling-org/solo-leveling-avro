@@ -8,7 +8,7 @@
       "type": "string"
     },
     {
-      "name": "userId",
+      "name": "playerId",
       "type": "long"
     },
     {
@@ -19,6 +19,10 @@
           "type": "record",
           "name": "GenerateTask",
           "fields": [
+            {
+              "name": "taskId",
+              "type": "string"
+            },
             {
               "name": "rarity",
               "type": {
