@@ -4,10 +4,6 @@
   "name": "Notification",
   "fields": [
     {
-      "name": "title",
-      "type": "string"
-    },
-    {
       "name": "message",
       "type": "string"
     }

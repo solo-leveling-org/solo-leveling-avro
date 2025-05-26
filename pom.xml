@@ -4,7 +4,7 @@
 
   <groupId>com.sleepkqq</groupId>
   <artifactId>solo-leveling-avro</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 
   <properties>
     <java.version>24</java.version>
