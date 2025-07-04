@@ -9,8 +9,6 @@ import org.apache.kafka.common.serialization.StringSerializer
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory
 import org.springframework.kafka.core.*
 import java.lang.Boolean
-import java.util.Map
-import kotlin.Any
 import kotlin.String
 
 @Suppress("unused")
@@ -26,11 +24,11 @@ abstract class DefaultKafkaConfig(
 
 	fun <V> createProducerFactory(): ProducerFactory<String, V> {
 		return DefaultKafkaProducerFactory<String, V>(
-			Map.of(
-				ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers,
-				ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer::class,
-				ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer::class,
-				SCHEMA_REGISTRY_URL_CONFIG, schemaRegistryUrl
+			mapOf(
+				ProducerConfig.BOOTSTRAP_SERVERS_CONFIG to bootstrapServers,
+				ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG to StringSerializer::class.java,
+				ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG to KafkaAvroSerializer::class.java,
+				SCHEMA_REGISTRY_URL_CONFIG to schemaRegistryUrl
 			)
 		)
 	}
@@ -41,13 +39,13 @@ abstract class DefaultKafkaConfig(
 
 	fun <V> createConsumerFactory(groupId: String): ConsumerFactory<String, V> {
 		return DefaultKafkaConsumerFactory<String, V>(
-			Map.of<String, Any>(
-				ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers,
-				ConsumerConfig.GROUP_ID_CONFIG, groupId,
-				ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer::class,
-				ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer::class,
-				SCHEMA_REGISTRY_URL_CONFIG, schemaRegistryUrl,
-				SPECIFIC_AVRO_READER_CONFIG, Boolean.TRUE.toString()
+			mapOf(
+				ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG to bootstrapServers,
+				ConsumerConfig.GROUP_ID_CONFIG to groupId,
+				ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG to StringDeserializer::class.java,
+				ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG to KafkaAvroDeserializer::class.java,
+				SCHEMA_REGISTRY_URL_CONFIG to schemaRegistryUrl,
+				SPECIFIC_AVRO_READER_CONFIG to Boolean.TRUE.toString()
 			)
 		)
 	}
