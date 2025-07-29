@@ -40,6 +40,15 @@
               "type": "int"
             },
             {
+              "name": "currencyReward",
+              "type": {
+                "type": "bytes",
+                "logicalType": "decimal",
+                "precision": 19,
+                "scale": 2
+              }
+            },
+            {
               "name": "rarity",
               "type": {
                 "type": "com.sleepkqq.sololeveling.avro.task.TaskRarity"
