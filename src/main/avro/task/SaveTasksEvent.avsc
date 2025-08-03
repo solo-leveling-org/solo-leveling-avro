@@ -25,7 +25,8 @@
             },
             {
               "name": "version",
-              "type": "int"
+              "type": "int",
+              "default": 0
             },
             {
               "name": "title",
@@ -46,7 +47,8 @@
                 "logicalType": "decimal",
                 "precision": 19,
                 "scale": 2
-              }
+              },
+              "default": "0.00"
             },
             {
               "name": "rarity",

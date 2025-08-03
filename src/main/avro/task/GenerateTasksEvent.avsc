@@ -25,7 +25,8 @@
             },
             {
               "name": "version",
-              "type": "int"
+              "type": "int",
+              "default": 0
             },
             {
               "name": "rarity",
