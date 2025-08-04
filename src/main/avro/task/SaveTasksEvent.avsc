@@ -42,13 +42,8 @@
             },
             {
               "name": "currencyReward",
-              "type": {
-                "type": "bytes",
-                "logicalType": "decimal",
-                "precision": 19,
-                "scale": 2
-              },
-              "default": "0.00"
+              "type": "int",
+              "default": 0
             },
             {
               "name": "rarity",
