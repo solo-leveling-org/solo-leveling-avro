@@ -1,0 +1,10 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.avro.notification",
+  "type": "enum",
+  "name": "NotificationPriority",
+  "symbols": [
+    "INFO",
+    "WARNING",
+    "ERROR"
+  ]
+}

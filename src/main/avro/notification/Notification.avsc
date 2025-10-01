@@ -6,6 +6,10 @@
     {
       "name": "message",
       "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "com.sleepkqq.sololeveling.avro.notification.NotificationType"
     }
   ]
 }
