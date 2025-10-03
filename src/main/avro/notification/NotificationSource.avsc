@@ -1,0 +1,8 @@
+{
+  "namespace": "com.sleepkqq.sololeveling.avro.notification",
+  "type": "enum",
+  "name": "NotificationSource",
+  "symbols": [
+    "TASKS"
+  ]
+}
