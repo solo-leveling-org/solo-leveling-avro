@@ -33,7 +33,7 @@ abstract class DefaultKafkaConfig(
 				ProducerConfig.BOOTSTRAP_SERVERS_CONFIG to bootstrapServers,
 				ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG to StringSerializer::class.java,
 				ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG to KafkaAvroSerializer::class.java,
-				ProducerConfig.INTERCEPTOR_CLASSES_CONFIG to LocaleKafkaProducerInterceptor::class.java,
+				ProducerConfig.INTERCEPTOR_CLASSES_CONFIG to listOf(LocaleKafkaProducerInterceptor::class.java),
 				SCHEMA_REGISTRY_URL_CONFIG to schemaRegistryUrl
 			)
 		)
@@ -50,7 +50,7 @@ abstract class DefaultKafkaConfig(
 				ConsumerConfig.GROUP_ID_CONFIG to groupId,
 				ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG to StringDeserializer::class.java,
 				ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG to KafkaAvroDeserializer::class.java,
-				ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG to LocaleKafkaConsumerInterceptor::class.java,
+				ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG to listOf(LocaleKafkaConsumerInterceptor::class.java),
 				SCHEMA_REGISTRY_URL_CONFIG to schemaRegistryUrl,
 				SPECIFIC_AVRO_READER_CONFIG to Boolean.TRUE.toString()
 			)
