@@ -5,7 +5,11 @@
   "fields": [
     {
       "name": "message",
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ],
+      "default": null
     },
     {
       "name": "type",
