@@ -3,6 +3,7 @@
   "type": "enum",
   "name": "NotificationSource",
   "symbols": [
-    "TASKS"
+    "TASKS",
+    "LOCALE"
   ]
 }
